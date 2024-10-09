@@ -1,0 +1,232 @@
+*
+{
+    /*to ensure proper paddings*/
+    box-sizing: border-box;
+}
+html { /*to set a consistent font across the website*/
+    font-family: "Lucida Sans", sans-serif;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+/* use . to refer to a class*/
+.header{
+    background-color: darkgray; 
+    color: white;
+    padding: 15px;
+    text-align: center;
+}   
+
+/* using CSS grid as a base of our layout
+that was marked with containers*/
+.container {
+    display: grid;
+    /* single column layout for mobile devices*/
+    grid-template-columns: 1 fr;
+    grid-gap: 20px;
+    padding: 15px;
+}
+/*refering to our navigation menu*/
+.menu{
+    background-color: darkslateblue;
+    padding: 15px;
+}
+.menu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu li{
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: darkgray;
+    color: white;
+    text-align: center;
+    box-shadow: 0 1px 3px lightgray, grey;
+    border-radius: 3px;
+}
+.menu li:hover{
+    background-color: skyblue;
+}
+
+.main {
+    background-color: rgb(248, 248, 248);
+    padding: 15px;
+}
+
+/*styling for the right pane*/
+.aside{
+    background-color: darkslateblue;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px lightgray, grey;
+
+}
+/*styling for the footer section*/
+.footer{
+    background-color: darkgray; 
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 11px;
+}
+
+.responsive-img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/*styling for a mobile phone sizes*/
+@media only screen and (min-width: 700px){
+    .container {
+        grid-template-columns: 1fr 2fr 1fr;
+        /*using 3 layout columns*/
+    }
+    .responsive-img {
+        max-width: 680px;
+        display: block;
+        margin: 0 auto;
+    }
+    .about-me{
+        padding: 10px;
+    }
+    .about-me h1, .about-me h2, .about-me h3, .about-me h4, .about-me h5, .about-me h6 {
+        /* font-size: 0.8em; */
+    }
+    .about-me p, .about-me li {
+        font-size: 12px;
+    }
+    .about-me ol, .about-me ul {
+        padding-left: 15px;
+    }
+    .footer {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}
+
+.about-me{
+    padding: 15px;
+}
+.about-me h1, .about-me h2, .about-me h3, .about-me h4, .about-me h5, .about-me h6 {
+    margin-bottom: 10px;
+}
+.about-me p, .about-me li{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.about-me ol, .about.me ul{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.registration-Form{
+    font-family: 'roboto',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #f5f5f5;
+
+}
+.registrationForm{
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    place-self: center;
+}
+h2{
+    /* text-align: center; */
+    color: #424242;
+    margin-bottom: 30px;
+}
+h3{
+    /* text-align: center; */
+    color: white;
+    margin-bottom: 30px;
+}
+.rForm-group{
+    margin-bottom: 20px;
+}
+label{
+    display: block;
+    margin-bottom: 8px;
+    color: #757575;
+}
+/*styling the from between in-focus*/
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus{
+    border-color: #6200ea;
+    outline: none;
+}
+.rForm-group .error{
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.btn-submit{
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-submit:hover {
+    background-color: #3700b3;
+}
+
+.myHoliday {
+    background-image: url('Backdrop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+header {
+    text-align: center;
+}
+/* Additional Media Queries for Smaller Screens */
+@media only screen and (max-width: 600px) {
+    .registrationForm {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+    h2 {
+        font-size: 24px; /* Smaller font size for header */
+    }
+    .menu {
+        padding: 10px; /* Reduce padding for menu */
+    }
+    .aside {
+        font-size: 12px; /* Adjust font size in aside */
+    }
+}
