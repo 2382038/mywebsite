@@ -85,6 +85,48 @@ that was marked with containers*/
     border-radius: 10px;
 }
 
+.profile-img{
+    width: 200px;
+    aspect-ratio: 3/4;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  .title {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+  
+  .gallery img {
+    max-width: 100%;
+    flex-basis: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .gallery::after {
+    content: "";
+    width: 350px;
+  }
+  
+
 /*styling for a mobile phone sizes*/
 @media only screen and (min-width: 700px){
     .container {
@@ -92,6 +134,11 @@ that was marked with containers*/
         /*using 3 layout columns*/
     }
     .responsive-img {
+        max-width: 680px;
+        display: block;
+        margin: 0 auto;
+    }
+    .profile-img {
         max-width: 680px;
         display: block;
         margin: 0 auto;
@@ -168,8 +215,11 @@ label{
 }
 /*styling the from between in-focus*/
 input[type="text"],
+input[type="date"],
+input[type="tel"],
 input[type="email"],
-input[type="password"]{
+input[type="text"],
+input[type="zip"]{
     width: 100%;
     padding: 12px;
     border: 1px solid #bdbdbd;
@@ -178,8 +228,11 @@ input[type="password"]{
     transition: border-color 0.2s ease;
 }
 input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
 input[type="email"]:focus,
-input[type="password"]:focus{
+input[type="text"]:focus,
+input[type="zip"]:focus{
     border-color: #6200ea;
     outline: none;
 }
@@ -228,5 +281,8 @@ header {
     }
     .aside {
         font-size: 12px; /* Adjust font size in aside */
+    }
+    .gallery img {
+        max-width: 100%;
     }
 }
