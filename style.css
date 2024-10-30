@@ -112,14 +112,16 @@ that was marked with containers*/
     max-width: 1400px;
     margin: 0 auto;
     padding: 20px 10px;
-  }
-  
-  .gallery img {
-    max-width: 100%;
-    flex-basis: 350px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 280px;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
-  }
+}
+
   
   .gallery::after {
     content: "";
